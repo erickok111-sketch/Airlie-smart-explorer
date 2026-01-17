@@ -1,0 +1,71 @@
+html, body { margin:0; padding:0; height:100%; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+#map { position:fixed; top:0; left:0; right:0; bottom:0; }
+
+.topbar{
+  position:fixed; top:10px; left:10px; right:10px;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 12px; border-radius:14px;
+  background:rgba(255,255,255,0.92); backdrop-filter: blur(8px);
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
+  z-index:10;
+}
+.brand{ font-weight:700; }
+.toggle{ display:flex; align-items:center; gap:8px; font-size:14px; }
+
+.bottombar{
+  position:fixed; left:10px; right:10px; bottom:10px;
+  display:flex; gap:8px; overflow:auto;
+  padding:10px; border-radius:16px;
+  background:rgba(255,255,255,0.92); backdrop-filter: blur(8px);
+  box-shadow:0 8px 24px rgba(0,0,0,0.12);
+  z-index:10;
+}
+.chip{
+  white-space:nowrap;
+  border:1px solid #e5e5e5;
+  background:#fff;
+  padding:8px 10px;
+  border-radius:999px;
+  font-size:13px;
+  cursor:pointer;
+}
+.chip.active{ border-color:#111; }
+
+.sheet{
+  position:fixed; left:0; right:0; bottom:-100%;
+  background:#fff;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+  box-shadow:0 -12px 40px rgba(0,0,0,0.18);
+  z-index:20;
+  transition: bottom 240ms ease;
+  max-height:70vh;
+  overflow:auto;
+}
+.sheet.open{ bottom:0; }
+.sheet-handle{
+  width:48px; height:5px; border-radius:999px;
+  background:#ddd; margin:10px auto 6px;
+}
+.sheet-content{ padding:12px 16px 18px; }
+.sheet-title{ font-size:18px; font-weight:800; }
+.sheet-sub{ color:#666; margin-top:2px; font-size:13px; }
+
+.badgeRow{ display:flex; gap:8px; flex-wrap:wrap; margin:10px 0; }
+.badge{
+  padding:6px 8px; border-radius:999px;
+  background:#f3f3f3; font-size:12px;
+}
+
+.sheet-desc{ margin:8px 0 12px; color:#222; line-height:1.35; }
+
+.meta{ display:grid; gap:8px; font-size:13px; color:#222; }
+.meta span{ color:#444; }
+
+.actions{ display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
+.btn{
+  border:1px solid #e5e5e5; background:#fff;
+  padding:10px 12px; border-radius:12px;
+  text-decoration:none; color:#111; font-size:14px;
+}
+.btn-primary{ border-color:#111; background:#111; color:#fff; }

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airlie Beach Smart Explorer</title>
+
+  <!-- Mapbox GL -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="brand">Airlie Smart Explorer</div>
+    <label class="toggle">
+      <input id="bestTodayToggle" type="checkbox" checked />
+      <span>Best today</span>
+    </label>
+  </div>
+
+  <!-- Bottom filter bar -->
+  <nav class="bottombar" id="categoryBar">
+    <button class="chip active" data-cat="Beach">Beach</button>
+    <button class="chip active" data-cat="Swimming Spot">Swim</button>
+    <button class="chip active" data-cat="Family Friendly">Family</button>
+    <button class="chip active" data-cat="Food & Drink">Food</button>
+    <button class="chip active" data-cat="Hidden Gem">Gems</button>
+    <button class="chip active" data-cat="Land Based">Land</button>
+    <button class="chip active" data-cat="Rainy Weather">Rainy</button>
+    <button class="chip active" data-cat="Experiences">XP</button>
+    <button class="chip active" data-cat="Adventure (Water)">Water</button>
+    <button class="chip active" data-cat="Lookout">Lookout</button>
+  </nav>
+
+  <!-- Bottom sheet -->
+  <section class="sheet" id="sheet" aria-hidden="true">
+    <div class="sheet-handle" id="sheetHandle"></div>
+    <div class="sheet-content">
+      <div class="sheet-title" id="sheetTitle"></div>
+      <div class="sheet-sub" id="sheetSub"></div>
+
+      <div class="badgeRow" id="badgeRow"></div>
+
+      <p class="sheet-desc" id="sheetDesc"></p>
+
+      <div class="meta">
+        <div><strong>Best time:</strong> <span id="sheetBestTime"></span></div>
+        <div><strong>Duration:</strong> <span id="sheetDuration"></span></div>
+        <div><strong>Facilities:</strong> <span id="sheetFacilities"></span></div>
+        <div><strong>Safety:</strong> <span id="sheetSafety"></span></div>
+        <div><strong>Photo tips:</strong> <span id="sheetPhoto"></span></div>
+      </div>
+
+      <div class="actions">
+        <a id="sheetWebsite" class="btn" target="_blank" rel="noopener">Website</a>
+        <a id="sheetBooking" class="btn btn-primary" target="_blank" rel="noopener">Book</a>
+        <button id="sheetDirections" class="btn" type="button">Directions</button>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
+
